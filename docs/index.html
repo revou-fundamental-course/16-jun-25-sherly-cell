@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Matematika - Sherly</title>
+
+    <!-- CSS External-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Content -->
+      <header>
+        <h1 style="text-align: center">Welcome to Katik</h1>
+        <p style="text-align: center">
+          'Katik' adalah kalkulator web interaktif yang didesain khusus untuk
+          membantu Anda menghitung luas dan keliling segitiga. Pengguna hanya
+          perlu memasukkan panjang sisi, alas, dan tinggi yang relevan.
+          Kalkulator akan langsung menampilkan hasilnya. Proyek ini akan
+          berfokus pada penyediaan antarmuka yang bersih dan mudah digunakan,
+          memastikan bahwa perhitungan dapat dilakukan dengan cepat dan akurat.
+          Dibangun menggunakan HTML, CSS, dan JavaScript, 'Katik' akan menjadi
+          alat praktis yang membutuhkan perhitungan segitiga secara instan.
+        </p>
+        <nav class="nav" style="text-align: center">
+          <button
+            class="btn-luas"
+            onclick="tampilkan('Luas')"
+            class="active-tab"
+          >
+            Luas Segitiga
+          </button>
+          <button
+            class="btn-keliling"
+            onclick="tampilkan('Keliling')"
+            class="active-tab"
+          >
+            Keliling Segitiga
+          </button>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-section">
+        <!-- Luas Segitiga -->
+        <section class="card" id="luas-card">
+          <h2>Hitung Luas Segitiga</h2>
+          <img
+            src="https://th.bing.com/th/id/OIP.pl1Ylur3mRI9HteA2l9PYQAAAA?r=0&rs=1&pid=ImgDetMain"
+            alt="Segitiga"
+          />
+          <p>Rumus Luas Segitiga :</p>
+          <p>
+            <strong>Luas = 1/2 x a x t</strong>
+          </p>
+          <p>Dimana :</p>
+          <ul>
+            <li><strong>L</strong> = Luas</li>
+            <li><strong>a</strong> = Alas</li>
+            <li><strong>t</strong> = Tinggi</li>
+          </ul>
+
+          <label for="alas">Alas :</label>
+          <input
+            type="number"
+            id="alas"
+            placeholder="Masukkan Panjang Alas"
+            min="1"
+          />
+          <span class="error" id="error-alas"></span>
+          <label for="tinggi">Tinggi :</label>
+          <input
+            type="number"
+            id="tinggi"
+            placeholder="Masukkan Tinggi"
+            min="1"
+          />
+          <span class="error" id="error-tinggi"></span>
+
+          <button onclick="hitungluas()">Hitung Luas</button>
+          <button onclick="resetluas()">Reset</button>
+          <p id="hasilluas" class="hasil"></p>
+        </section>
+
+        <!-- Keliling Segitiga -->
+        <section class="card" id="kelilingcard">
+          <h2>Hitung Keliling Segitiga</h2>
+          <img
+            src="https://th.bing.com/th/id/OIP.pl1Ylur3mRI9HteA2l9PYQAAAA?r=0&rs=1&pid=ImgDetMain"
+            alt="Segitiga"
+          />
+          <p>Rumus Keliling Segitiga :</p>
+          <p>
+            <strong>Keliling = a + b + c</strong>
+          </p>
+          <p>Dimana :</p>
+          <ul>
+            <li><strong>K</strong> = Keliling</li>
+            <li><strong>a</strong> = Sisi 1</li>
+            <li><strong>b</strong> = Sisi 2</li>
+            <li><strong>c</strong> = Sisi 3</li>
+          </ul>
+
+          <label for="sisi1">Sisi 1 :</label>
+          <input
+            type="number"
+            id="sisi1"
+            placeholder="Masukkan Panjang a"
+            min="1"
+          />
+          <span class="error" id="error-sisi1"></span>
+          <label for="sisi2">Sisi 2 :</label>
+          <input
+            type="number"
+            id="sisi2"
+            placeholder="Masukkan Panjang b"
+            min="1"
+          />
+          <span class="error" id="error-sisi2"></span>
+          <label for="sisi3">Sisi 3 :</label>
+          <input
+            type="number"
+            id="sisi3"
+            placeholder="Masukkan Panjang c"
+            min="1"
+          />
+          <span class="error" id="error-sisi3"></span>
+
+          <button onclick="hitungkeliling()">Hitung Keliling</button>
+          <button onclick="resetkeliling()">Reset</button>
+          <p id="hasilkeliling" class="hasil"></p>
+        </section>
+      </main>
+
+      <!-- Footer Content-->
+      <footer style="text-align: center">
+        <p>&copy; 2025 Katik. Di buat dengan ❤ oleh Sherly</p>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

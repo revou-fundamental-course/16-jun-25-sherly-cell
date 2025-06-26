@@ -1,0 +1,215 @@
+/* Warna */
+:root {
+  --pink: #e91e63; /* raspberry pink */
+  --gray: #f0f0f0;
+  --dark: #333;
+  --white: #fff;
+}
+
+/* Reset dasar */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--gray);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0 0 10px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.nav button {
+  background-color: var(--white);
+  color: var(--pink);
+  padding: 12px 25px;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav button:hover {
+  background-color: var(--light-gray);
+  border-color: var(--pink);
+  transform: translateY(-2px);
+}
+
+.nav button.active-btn {
+  background-color: var(--dark);
+  color: var(--white);
+  border-color: var(--dark);
+  cursor: default;
+}
+
+.nav button.active-btn:hover {
+  background-color: var(--dark);
+  border-color: var(--dark);
+  transform: none;
+}
+
+/* Layout utama */
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Kartu */
+.card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: var(--pink);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.card ul li {
+  margin-bottom: 5px;
+}
+
+/* Input dan tombol */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+/* Input dan tombol */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: var(--pink);
+}
+
+button {
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+button.button-reset {
+  background-color: var(--gray);
+  color: var(--dark);
+  border: 1px solid var(--light-gray);
+  margin-top: 10px;
+}
+
+button.button-reset:hover {
+  background-color: var(--light-gray);
+  transform: translateY(-1px);
+}
+
+.hasil {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--dark);
+  text-align: center;
+  background-color: var(--gray);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px dashed var(--pink);
+}
+
+/* Pesan Error */
+.error {
+  color: var(--red-error);
+  font-size: 0.9em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--dark);
+  color: var(--white);
+  margin-top: 50px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+}
